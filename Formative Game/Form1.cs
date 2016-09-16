@@ -93,7 +93,7 @@ namespace Formative_Game
 
             formGraphics.FillEllipse(drawBrush, 20, 50, 30, 30);
             formGraphics.FillEllipse(secondBrush, 100, 50, 30, 30);
-            Thread.Sleep(1000);
+            Thread.Sleep(1000)
         }
 
         private void startButton_MouseHover(object sender, EventArgs e)/*When you hover over 
