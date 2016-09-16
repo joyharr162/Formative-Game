@@ -56,13 +56,9 @@ namespace Formative_Game
             label3.Dispose();
             label4.Dispose();
             startButton.Dispose();
-            BackColor = Color.ForestGreen;
 
             SoundPlayer player = new SoundPlayer(Properties.Resources.alert);//plays sound
             player.Play();
-
-            Refresh();
-            Thread.Sleep(1000);//wait one second
 
             Graphics formGraphics = this.CreateGraphics();//pens and brushes
             Pen drawPen = new Pen(Color.Black, 10);
@@ -72,13 +68,14 @@ namespace Formative_Game
             SolidBrush secondBrush = new SolidBrush(Color.BlueViolet);
             SolidBrush thirdBrush = new SolidBrush(Color.Orange);
 
-            /*formGraphics.FillRectangle(drawBrush, 60, 80, 50, 100);//draw logo
+            BackColor = Color.ForestGreen;
+            formGraphics.FillRectangle(drawBrush, 60, 80, 50, 100);//draw logo
             formGraphics.TranslateTransform(125,80);//draw and rotate string
             formGraphics.RotateTransform(90);
             formGraphics.DrawString("Central Rams Arcade", drawFont, drawBrush, new Rectangle());
             formGraphics.ResetTransform();
             formGraphics.FillEllipse(thirdBrush, 82, 100, 10, 20);
-            formGraphics.DrawString("C", secondFont, secondBrush, 55, 75);*/
+            formGraphics.DrawString("C", secondFont, secondBrush, 55, 75);
         
             Thread.Sleep(3000);//wait three seconds
 
