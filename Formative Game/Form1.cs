@@ -92,8 +92,25 @@ namespace Formative_Game
             Thread.Sleep(1000);
 
             formGraphics.FillEllipse(drawBrush, 20, 50, 30, 30);
-            formGraphics.FillEllipse(secondBrush, 100, 50, 30, 30);
-            Thread.Sleep(1000)
+            formGraphics.FillEllipse(secondBrush, 75, 50, 30, 30);
+            Thread.Sleep(1000);
+
+            formGraphics.FillEllipse(drawBrush, 75, 50, 30, 30);
+            formGraphics.FillPie(secondBrush, 140, 50, 30, 30, 30, 300);//close pacman's mouth
+            Thread.Sleep(1000);
+
+            formGraphics.FillEllipse(drawBrush, 140, 50, 30, 30);
+            formGraphics.FillEllipse(secondBrush, 140, 105, 30, 30);
+            Thread.Sleep(1000);
+
+            formGraphics.FillEllipse(drawBrush, 140, 105, 30, 30);
+            formGraphics.FillPie(secondBrush, 140, 155, 30, 30, 100, 300);
+            Thread.Sleep(1000);
+
+            formGraphics.FillEllipse(drawBrush, 140, 155, 30, 30);
+            formGraphics.FillEllipse(secondBrush, 140, 210, 30, 30);
+            Thread.Sleep(1000);
+            formGraphics.FillEllipse(drawBrush, 140, 210, 30, 30);
         }
 
         private void startButton_MouseHover(object sender, EventArgs e)/*When you hover over 
