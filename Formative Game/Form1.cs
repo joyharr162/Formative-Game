@@ -1,6 +1,6 @@
 ﻿/// Created by Joy Harris
 /// on September 8 2016
-/// 
+/// to display a logo and animate pacman
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -50,7 +50,7 @@ namespace Formative_Game
             Thread.Sleep(1000);
             label4.BackColor = Color.Black;
 
-            startButton.BackColor = Color.ForestGreen;//changes screen to green, clears labels
+            //changes screen to green, clears labels
             label1.Dispose();
             label2.Dispose();
             label3.Dispose();
@@ -60,19 +60,21 @@ namespace Formative_Game
             SoundPlayer player = new SoundPlayer(Properties.Resources.alert);//plays sound
             player.Play();
 
+            
             Graphics formGraphics = this.CreateGraphics();//pens and brushes
             Pen drawPen = new Pen(Color.Black, 10);
             SolidBrush drawBrush = new SolidBrush(Color.Black);
+            SolidBrush greenBrush = new SolidBrush(Color.Green);
             Font drawFont = new Font("Arial",8, FontStyle.Bold);
             Font secondFont = new Font("Copperplate Gothic Bold", 44, FontStyle.Bold);
             SolidBrush secondBrush = new SolidBrush(Color.BlueViolet);
             SolidBrush thirdBrush = new SolidBrush(Color.Orange);
 
-            BackColor = Color.ForestGreen;
-            formGraphics.FillRectangle(drawBrush, 60, 80, 50, 100);//draw logo
+            
+            formGraphics.FillRectangle (greenBrush, 60, 80, 50, 100);//draw logo
             formGraphics.TranslateTransform(125,80);//draw and rotate string
             formGraphics.RotateTransform(90);
-            formGraphics.DrawString("Central Rams Arcade", drawFont, drawBrush, new Rectangle());
+            formGraphics.DrawString("Central Rams Arcade", drawFont, greenBrush, new Rectangle());
             formGraphics.ResetTransform();
             formGraphics.FillEllipse(thirdBrush, 82, 100, 10, 20);
             formGraphics.DrawString("C", secondFont, secondBrush, 55, 75);
@@ -101,7 +103,7 @@ namespace Formative_Game
             Thread.Sleep(1000);
 
             formGraphics.FillEllipse(drawBrush, 140, 105, 30, 30);
-            formGraphics.FillPie(secondBrush, 140, 155, 30, 30, 100, 300);
+            formGraphics.FillPie(secondBrush, 140, 155, 30, 30, 120, 300);
             Thread.Sleep(1000);
 
             formGraphics.FillEllipse(drawBrush, 140, 155, 30, 30);
